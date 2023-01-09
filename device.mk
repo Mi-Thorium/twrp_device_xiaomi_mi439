@@ -8,7 +8,11 @@
 MITHORIUM_INCLUDE_CRYPTO_FBE := true
 
 # Inherit from mithorium-common
+ifeq ($(MITHORIUM_KERNEL_VERSION),4.19)
+$(call inherit-product, device/xiaomi/mithorium-common-4.19/mithorium.mk)
+else
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
+endif
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
