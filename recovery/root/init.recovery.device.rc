@@ -8,6 +8,10 @@ on boot
     setprop adsp.boot 1
 
 # Audio
+on post-fs-data
+    exec u:r:recovery:s0 -- /system/bin/sleep 3s
+    exec u:r:recovery:s0 -- /system/bin/tinymix "Ext Spk Switch" Off
+
 on property:adsp.boot=1 && property:audio.enable=*
     exec u:r:recovery:s0 -- /system/bin/audio-enable.sh ${audio.enable}
 
