@@ -4,6 +4,10 @@ ENABLE=$1
 
 #tinymix '     ' $([ "$ENABLE" == 1 ] && echo -n "1" || echo -n "0")
 
+# Disable boost
+tinymix "EAR PA Boost" "DISABLE"
+tinymix "Speaker Boost" "DISABLE"
+
 # Enable BE DAI
 tinymix 'PRI_MI2S_RX Audio Mixer MultiMedia1' $([ "$ENABLE" == 1 ] && echo -n "1" || echo -n "0")
 
