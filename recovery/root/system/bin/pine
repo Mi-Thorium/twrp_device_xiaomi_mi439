@@ -1,4 +1,3 @@
 #!/system/bin/sh
 source /system/bin/mithorium-utils.sh
 set_device_codename "pine"
-echo "pine" > /cache/last-recovery-codename

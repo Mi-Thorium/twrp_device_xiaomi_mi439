@@ -1,4 +1,3 @@
 #!/system/bin/sh
 source /system/bin/mithorium-utils.sh
 set_device_codename "mi439"
-echo "mi439" > /cache/last-recovery-codename
